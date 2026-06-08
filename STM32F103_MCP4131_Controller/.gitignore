@@ -2,8 +2,8 @@
 build/
 Debug/
 Release/
-sim/**/build/
-sim/**/cmake-build*/
+firmware/sim/**/build/
+firmware/sim/**/cmake-build*/
 
 # Object / binary artifacts
 *.o

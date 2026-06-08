@@ -5,7 +5,7 @@
       "label": "Configure Firmware",
       "type": "shell",
       "command": "cmake",
-      "args": ["-S", ".", "-B", "build", "-G", "Ninja"],
+      "args": ["-S", "firmware", "-B", "firmware/build", "-G", "Ninja"],
       "group": "build",
       "problemMatcher": []
     },
@@ -13,7 +13,7 @@
       "label": "Build Firmware",
       "type": "shell",
       "command": "cmake",
-      "args": ["--build", "build"],
+      "args": ["--build", "firmware/build"],
       "group": "build",
       "problemMatcher": "$gcc"
     },
@@ -21,7 +21,7 @@
       "label": "Configure Logic Simulation",
       "type": "shell",
       "command": "cmake",
-      "args": ["-S", "sim/pc", "-B", "sim/pc/build"],
+      "args": ["-S", "firmware/sim/pc", "-B", "firmware/sim/pc/build"],
       "group": "test",
       "problemMatcher": []
     },
@@ -29,7 +29,7 @@
       "label": "Build Logic Simulation",
       "type": "shell",
       "command": "cmake",
-      "args": ["--build", "sim/pc/build"],
+      "args": ["--build", "firmware/sim/pc/build"],
       "group": "test",
       "problemMatcher": "$gcc"
     },
@@ -37,7 +37,7 @@
       "label": "Flash Firmware",
       "type": "shell",
       "command": "STM32_Programmer_CLI",
-      "args": ["-c", "port=SWD", "-w", "build/firmware.elf", "-v", "-rst"],
+      "args": ["-c", "port=SWD", "-w", "firmware/build/firmware.elf", "-v", "-rst"],
       "problemMatcher": []
     }
   ]

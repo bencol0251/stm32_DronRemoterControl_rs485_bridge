@@ -32,15 +32,15 @@ add_executable(firmware.elf
     Core/Src/main.c
     Core/Src/stm32f1xx_it.c
     Core/Src/stm32f1xx_hal_msp.c
-    Core/Src/app.c
-    Core/Src/protocol.c
-    Core/Src/rs485.c
-    Core/Src/mcp4131.c
-    Core/Src/dip_switch.c
-    Core/Src/manual_keys.c
-    Core/Src/timer_service.c
-    Core/Src/key_mapping.c
-    Core/Src/sim_hooks.c
+    App/app.c
+    App/protocol.c
+    App/rs485.c
+    App/mcp4131.c
+    App/dip_switch.c
+    App/manual_keys.c
+    App/timer_service.c
+    App/key_mapping.c
+    App/sim_hooks.c
     "${CMSIS_DIR}/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_cortex.c"
@@ -57,6 +57,7 @@ add_executable(firmware.elf
 )
 
 target_include_directories(firmware.elf PRIVATE
+    App
     Core/Inc
     "${HAL_DRIVER_DIR}/Inc"
     "${HAL_DRIVER_DIR}/Inc/Legacy"
