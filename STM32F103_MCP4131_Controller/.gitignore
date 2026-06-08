@@ -1,0 +1,28 @@
+# Build outputs
+build/
+Debug/
+Release/
+sim/**/build/
+sim/**/cmake-build*/
+
+# Object / binary artifacts
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# Editor / OS noise
+.vs/
+*.user
+*.swp
+*.tmp
+Thumbs.db
+Desktop.ini

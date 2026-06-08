@@ -21,7 +21,7 @@
       "label": "Configure Logic Simulation",
       "type": "shell",
       "command": "cmake",
-      "args": ["-S", "Simulation/logic", "-B", "Simulation/logic/build"],
+      "args": ["-S", "sim/pc", "-B", "sim/pc/build"],
       "group": "test",
       "problemMatcher": []
     },
@@ -29,7 +29,7 @@
       "label": "Build Logic Simulation",
       "type": "shell",
       "command": "cmake",
-      "args": ["--build", "Simulation/logic/build"],
+      "args": ["--build", "sim/pc/build"],
       "group": "test",
       "problemMatcher": "$gcc"
     },
