@@ -45,6 +45,7 @@ add_executable(firmware.elf
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_cortex.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_gpio.c"
+    "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_dma.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_rcc.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_rcc_ex.c"
     "${HAL_DRIVER_DIR}/Src/stm32f1xx_hal_flash.c"
