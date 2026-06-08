@@ -29,6 +29,7 @@
 #include "stm32f1xx_hal_dma.h"
 #include "stm32f1xx_hal_cortex.h"
 #include "stm32f1xx_hal_uart.h"
+#include "stm32f1xx_hal_usart.h"
 #include "stm32f1xx_hal_spi.h"
 #include "stm32f1xx_hal_tim.h"
 #include "stm32f1xx_hal_flash.h"
