@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STM32F103 MCP4131 Visual Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>STM32F103 MCP4131 Controller</h1>
+        <p>RS485 to five MCP4131 devices</p>
+      </div>
+      <div class="clock">
+        <span id="timerMs">0 ms</span>
+        <span id="packetAge">last valid: 0 ms</span>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="panel controls">
+        <h2>DIP Address</h2>
+        <div class="dip-row" id="dipControls"></div>
+        <div class="readout">
+          <span>Decoded</span>
+          <strong id="decodedAddress">15</strong>
+        </div>
+
+        <h2>PC Command</h2>
+        <label>Target address
+          <input id="targetAddress" type="number" min="0" max="15" value="15">
+        </label>
+        <label>Command
+          <select id="command">
+            <option value="16">SET_FIVE_KEYS</option>
+            <option value="17">STOP_ALL_RESET</option>
+            <option value="32">GET_STATUS</option>
+          </select>
+        </label>
+        <div class="key-grid" id="keySelectors"></div>
+        <button id="sendPacket" class="primary">Send Packet</button>
+
+        <h2>Manual Keys</h2>
+        <div class="manual-row">
+          <button id="pa15" class="manual">PA15</button>
+          <button id="pb3" class="manual">PB3</button>
+        </div>
+      </aside>
+
+      <section class="panel bus">
+        <div class="bus-header">
+          <h2>RS485 Frames</h2>
+          <span id="timeoutIndicator" class="status ok">READY</span>
+        </div>
+        <div class="frame-grid">
+          <div>
+            <h3>Request</h3>
+            <code id="requestFrame">--</code>
+          </div>
+          <div>
+            <h3>Response</h3>
+            <code id="responseFrame">--</code>
+          </div>
+        </div>
+
+        <h2>MCP4131 State</h2>
+        <div class="mcp-grid" id="mcpGrid"></div>
+
+        <h2>SPI Update Log</h2>
+        <ol id="spiLog" class="log"></ol>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

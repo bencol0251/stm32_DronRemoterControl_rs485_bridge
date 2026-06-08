@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure Firmware",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["-S", ".", "-B", "build", "-G", "Ninja"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Firmware",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "build"],
+      "group": "build",
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Configure Logic Simulation",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["-S", "Simulation/logic", "-B", "Simulation/logic/build"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Logic Simulation",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "Simulation/logic/build"],
+      "group": "test",
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Flash Firmware",
+      "type": "shell",
+      "command": "STM32_Programmer_CLI",
+      "args": ["-c", "port=SWD", "-w", "build/firmware.elf", "-v", "-rst"],
+      "problemMatcher": []
+    }
+  ]
+}
