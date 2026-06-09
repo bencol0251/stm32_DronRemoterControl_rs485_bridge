@@ -1,0 +1,23 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "STM32F103",
+      "includePath": [
+        "D:/002_Auto Dron Work/Project from Mockup/stm32_DronRemoterControl_rs485_bridge/STM32F103_MCP4131_Controller/Core/Inc",
+        "D:/002_Auto Dron Work/Project from Mockup/stm32_DronRemoterControl_rs485_bridge/STM32F103_MCP4131_Controller/Simulation/logic",
+        "D:/002_Auto Dron Work/Project from Mockup/stm32_nrf24L01_rs485_bridge/firmware/Drivers/STM32F1xx_HAL_Driver/Inc",
+        "D:/002_Auto Dron Work/Project from Mockup/stm32_nrf24L01_rs485_bridge/firmware/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+        "D:/002_Auto Dron Work/Project from Mockup/stm32_nrf24L01_rs485_bridge/firmware/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+        "D:/002_Auto Dron Work/Project from Mockup/stm32_nrf24L01_rs485_bridge/firmware/Drivers/CMSIS/Include"
+      ],
+      "defines": [
+        "USE_HAL_DRIVER",
+        "STM32F103xB"
+      ],
+      "compilerPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.2 mpacbti-rel1/bin/arm-none-eabi-gcc.exe",
+      "cStandard": "c11",
+      "intelliSenseMode": "gcc-arm"
+    }
+  ]
+}
